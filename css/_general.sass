@@ -1,0 +1,101 @@
+/*-------------------------------------------
+ *	Colors
+ *-------------------------------------------
+
+$white: #fff
+$black: #222
+
+$bg: $white
+$primary: #4095bf
+$primary-dark: #1b5673
+$secondary: #ead4c4
+
+$text-color: #444
+$link-color: mix($primary, $primary-dark)
+
+$font: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial
+
+/*-------------------------------------------
+ *	Sizes
+ *-------------------------------------------
+
+$size-base: 20px
+$size-small: $size-base / 2
+$size-medium: $size-base * 2
+$size-large: $size-medium * 2
+
+/*-------------------------------------------
+ *	Type
+ *-------------------------------------------
+
+$base-font-size-value: 16
+$base-font-size: $base-font-size-value * 1px
+$base-font-rem: $base-font-size-value / $base-font-size-value * 1rem
+$base-line-height: 1.25
+
+=font-size($size, $base: $base-font-size-value)
+  $scale: $size / $base
+  font-size: $base-font-size * $scale
+  font-size: $base-font-rem * $scale
+
+%base-font
+  +font-size($base-font-size-value)
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-weight: normal
+  line-height: $base-line-height
+  color: $text-color
+
+body
+  @extend %base-font
+
+/*-------------------------------------------
+ *	Base Styles
+ *-------------------------------------------
+
+html
+  background: $bg
+
+\::-moz-selection
+  background: lighten($primary, 10%)
+  color: $white
+
+\::selection
+  background: lighten($primary, 10%)
+  color: $white
+
+%heading
+  @extend %base-font
+  font-weight: bold
+  margin: $size-medium 0 $size-small
+  a
+    color: inherit
+
+h1, %alpha
+  @extend %heading
+  +font-size(56)
+
+h2, %beta
+  @extend %heading
+  +font-size(48)
+
+h3, %gamma
+  @extend %heading
+  +font-size(36)
+
+h4, %delta
+  @extend %heading
+  +font-size(28)
+
+h5, %epsilon
+  @extend %heading
+  +font-size(24)
+
+h6, %zeta
+  @extend %heading
+  +font-size(16)
+
+p
+  margin: $size-small 0 $size-base
+
+a
+  color: $link-color

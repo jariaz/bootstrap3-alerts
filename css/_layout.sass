@@ -1,0 +1,61 @@
+/*-------------------------------------------
+ *	Layout
+ *-------------------------------------------
+
+body
+  font-family: $font
+  margin: 0 0 50px 0
+  position: relative
+
+  h1, h4
+    width: 80%
+    margin: 0 auto
+
+  h1
+    background: #44A2AE
+    color: #ffffff
+    padding: 5px
+    font-size: 20px
+    line-height: 125px
+    width: 150px
+    height: 150px
+    position: absolute
+    top: 20px
+    left: 40px
+
+    &.test-alert-2
+      top: 190px
+      background: #74AB5D
+
+    &.test-alert-3
+      top: 360px
+      background: #AD5B5B
+
+  .test-alert-1, .test-alert-2, .test-alert-3
+    cursor: pointer
+
+  .name
+    font-size: 8px
+    position: absolute
+    top: 865px
+    right: 10px
+
+  .alert
+    position: absolute
+    z-index: 1
+    width: 50%
+    right: 10px
+    top: 10px
+    border: none
+    border-radius: 0
+    color: #ffffff
+
+  .alert-info
+    background: #44A2AE
+
+  .alert-success
+    background: #74AB5D
+
+  .alert-danger
+    background: #AD5B5B
+

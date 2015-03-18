@@ -1,0 +1,29 @@
+{
+  "name": "Bootstrap 3 Alerts",
+  "version": "0.0.1",
+  "description": "Bootstrap3 alerts, dynamic ish",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Joseph Ariaz",
+      "email": "josephariaz@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jariaz/bootstrap3-alerts/"
+  },
+  "keywords": [
+    "Bootstrap",
+    "jquery",
+    "grunt",
+    "SASS"
+  ],
+  "dependencies": {
+    "bootstrap": "latest",
+    "bootstrap-additions": "latest",
+    "animate.css": "latest",
+    "jquery": "latest",
+    "html5shiv": "3.7.2"
+  }
+}
