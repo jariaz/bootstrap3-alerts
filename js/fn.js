@@ -15,17 +15,21 @@
         },
         fireAlert: function( type, msg, dismissable ) {
             var msg = msg, type = type, dismissable = dismissable;
-            var alert = '<div class=\"alert alert-'+ type +' fadeInDown animated alert-dismissible \" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>'+ msg +'</div>';
+            var randomId = Math.floor( (Math.random() * 100000000 ));
+
+            var alert = '<div class=\"alert alert-'+ type +' fadeInDown animated alert-dismissible \" id=\"'+ randomId +'\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>'+ msg +'</div>';
             $( alert ).appendTo('#alert');
 
-            //This is ugly
-            setTimeout(function() {
-                //$( '.alert' ).removeClass('fadeInDown').addClass('fadeOutUp');
+
+
+
+
+            setTimeout( function() {
+                $( '#' + randomId ).removeClass('fadeInDown').addClass('fadeOutUp');
             }, 3000);
 
-            //This is really ugly
-            setTimeout(function() {
-                //$( '.alert' ).remove();
+            setTimeout(function( randomId ) {
+                $( '#' + randomId ).remove();
             }, 3500);
 
         }

@@ -5,7 +5,8 @@
                 event: 'click',
                 selector: '.test-alert-1',
                 fn: function () {
-                    ja.fn.fireAlert( 'info', 'More info ... ?', false);
+                    ja.fn.fireAlert('info','Getting data...',true);
+                    ja.ajax.getData();
                 }
             },
             {
